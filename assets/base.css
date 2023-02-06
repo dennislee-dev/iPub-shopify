@@ -361,6 +361,29 @@ body,
   background-color: rgba(var(--color-foreground), 0.2);
 }
 
+@font-face {
+  font-family: "Helvetica";
+  src: url('{{ "Helvetica.ttf" | asset_url }}') format("ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Shift-Book";
+  src: url('{{ "FontsFree-Net-Shift.woff2" | asset_url }}') format("woff2");
+}
+
+@font-face {
+  font-family: "Boing";
+  src: url('{{ "Boing_Medium.woff2" | asset_url }}') format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Boing";
+  src: url('{{ "Boing_Bold.woff2" | asset_url }}') format("woff2");
+  font-weight: 700;
+}
+
 .text-body {
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
@@ -1064,7 +1087,7 @@ summary::-webkit-details-marker {
   }
 
   .grid--2-col-tablet .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    width: calc(40% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 }
 
@@ -1173,7 +1196,7 @@ summary::-webkit-details-marker {
 
   .slider--tablet.grid--peek.grid--2-col-tablet .grid__item,
   .slider--tablet.grid--peek.grid--2-col-tablet-down .grid__item {
-    width: calc(50% - var(--grid-desktop-horizontal-spacing) - 3rem);
+    width: calc(40% - var(--grid-desktop-horizontal-spacing) - 3rem);
   }
 
   .slider--tablet.grid--peek .grid__item:first-of-type {

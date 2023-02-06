@@ -197,6 +197,22 @@
                             </label>
                           {%- endfor -%}
                         </fieldset>
+                        {% comment %} <div class="faqs-item ">
+                          <legend class="form__label faqs-title">{{ option.name }}</legend>
+                            <div class="faqs-content">
+                                <div class="faqs-content-inside">
+                                  <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                                    name="{{ option.name }}"
+                                    value="{{ value | escape }}"
+                                    form="{{ product_form_id }}"
+                                    {% if option.selected_value == value %}checked{% endif %}
+                              >
+                              <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+                                {{ value }}
+                              </label>
+                                </div>
+                            </div>
+                        </div> {% endcomment %}
                     {%- endfor -%}
                     <script type="application/json">
                       {{ product.variants | json }}
@@ -463,6 +479,25 @@
   <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
 {% endif %}
+
+<script>
+  var acc = document.getElementsByClassName('faqs-title');
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener('click', function () {
+          this.classList.toggle('active');
+          console.log('here');
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+          } else {
+              panel.style.maxHeight = panel.scrollHeight + 'px';
+              panel.style.height = panel.scrollHeight + 'px';   
+          }
+      });
+  }
+</script>
 
 {% schema %}
 {

@@ -1,3 +1,5 @@
+
+
 .product {
   margin: 0;
 }
@@ -35,7 +37,7 @@
   }
 
   .product__info-wrapper {
-    padding-left: 5rem;
+    padding-left: 3rem;
   }
 
   .product__info-wrapper--extra-padding {
@@ -152,7 +154,7 @@
   flex: 0 0 100%;
   padding: 0;
   margin: 0 0 1.2rem 0;
-  max-width: 37rem;
+  /* max-width: 37rem; */
   min-width: fit-content;
   border: none;
 }
@@ -170,8 +172,22 @@ variant-selects {
   padding-left: 0;
 }
 
-fieldset.product-form__input .form__label {
-  margin-bottom: 0.2rem;
+fieldset.product-form__input .faqs-title {
+  color: black;
+  text-transform: none;
+  /* font-family: "Fort-Book","Helvetica Neue",Helvetica,Arial,sans-serif; */
+  margin: 0px;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+  outline: none;
+  transition: 0.4s;
 }
 
 .product-form__input input[type='radio'] {
@@ -291,9 +307,9 @@ fieldset.product-form__input .form__label {
 
 /* Product info */
 
-.product__info-container > * + * {
+/* .product__info-container > * + * {
   margin: 1.5rem 0;
-}
+} */
 
 .product__info-container .product-form,
 .product__info-container .product__description {
@@ -314,9 +330,15 @@ a.product__text {
   text-transform: uppercase;
 }
 
-.product__title {
+.product__title h1 {
   word-break: break-word;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 10px 0;
+  /* font-family: "Shift-Book"; */
+  letter-spacing: 0;
+  font-weight: 500;
 }
 
 .product__title > * {
@@ -445,6 +467,7 @@ a.product__text {
 
 .product-form__buttons {
   max-width: 44rem;
+  width: 100%;
 }
 
 .product--no-media .product__info-container > modal-opener {
@@ -1182,4 +1205,308 @@ a.product__text {
   width: 1.2rem;
   margin-left: 1.2rem;
   flex-shrink: 0;
+}
+
+
+.faqs-item {
+  width: 100%;
+  margin: 0 0 16px 0;
+  padding: 0;
+  display: block;
+  border: 1px solid #e6e6e7;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.faqs-item .product-info{
+  display: none;
+}
+
+
+
+/* .faqs-title {
+  display: flex;
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  width: 100%;
+  outline: none;
+  transition: 0.4s;
+} */
+
+.faqs-title:after {
+  content: '\002B';
+  color: #000;
+  font-weight: normal;
+  float: right;
+  margin-left: auto;
+  font-size: 24px;
+  line-height: 1;
+  padding-left: 20px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.faqs-content {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.product-form__buttons .product-form__submit{
+    border-radius: 0;
+    color: #000;
+    padding: 21px 26px;
+    border: 4px solid #FA6400;
+    line-height: 1px;
+    font-family: 'Fort-Medium';
+    background: transparent;
+    text-transform: uppercase;
+    display: block;
+}
+
+.faqs-content-inside {
+  padding: 16px 0 0 32px;
+  background-color: #fff;
+}
+
+.secvices{
+  padding: 0 0 23px 32px;
+  background-color: #fff;
+}
+
+.secvices p{
+  margin: 0;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.services-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.secvices a{
+  border: 1px solid #B5B5B5;
+    border-radius: 6px;
+    padding: 10px 16px;
+    margin: 0 10px 10px 0;
+    font-family: 'Fort-Medium';
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+}
+
+.secvices a:hover{
+  background-color: #E6E6E6;
+}
+
+.faqs-content-inside .variant-title{
+  font-size: 16px;
+  color: #333;
+  font-family: "Fort-Bold";
+  padding-right: 12px;
+  padding-bottom: 8px
+}
+
+.product-form__quantity{
+  display: none;
+}
+
+.product-form__input{
+  margin: 0;
+}
+
+.product-form__input .product-form{
+  display: flex;
+  margin: 0;
+}
+
+.product-form{
+  display: none;
+}
+
+.faqs-content-inside .variant-price{
+  font-family: 'Fort-Book';
+  font-size: 24px;
+  color: #333;
+}
+
+.faqs-content-inside .select__select{
+  height: 100%;
+  padding: 0;
+}
+
+.faqs-content-inside .format-info{
+  display: flex;
+  background-color: #fff;
+  margin-right: 32px;
+  justify-content: space-between;
+}
+
+.faqs-content-inside .formart-info_text{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.faqs-content-inside .variant-ibsn{
+  width: 100%;
+  display: block;
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+.button:after, .shopify-challenge__button:after, .customer button:after, .shopify-payment-button__button--unbranded:after{
+  box-shadow: unset !important;
+}
+
+.price--large{
+  display: none;
+}
+
+.shopify-installments{
+  display: none !important;
+}
+
+.caption-with-letter-spacing{
+  display: none;
+}
+
+.novel-author *{
+  margin: 0;
+}
+
+.novel-author p{
+  line-height: 1.231;
+  text-transform: uppercase;
+  font-size: 90%;
+  margin: 0;
+  padding: 0;
+  font-family: "Fort-Bold";
+}
+
+.novel-author h2{
+  font-size: 20px;
+  font-weight: normal;
+  margin: 5px 0 30px;
+  line-height: 1.23;
+  font-family: "Fort-Book","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: none;
+}
+
+.novel-author .author a{
+  font-family: "Fort-Bold";
+  display: inline-block;
+  text-transform: none;
+  color: #333;
+  text-decoration: none;
+}
+
+.novel-author .author a:hover{
+  text-decoration: underline;
+  text-decoration-color: #fa6400;
+}
+
+.product-catagory {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0 0 5px;
+  line-height: 1.23;
+  font-family: "Fort-Book","Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-transform: none;
+}
+
+.product-catagory a{
+  text-transform: none;
+  font-size: 16px;
+  text-decoration: underline;
+  color: #000;
+  font-family: "Fort-Medium";
+}
+
+.format_mssg {
+  font-family: "Shift-Book-Italic";
+  font-size: 14px;
+  color: #333;
+  line-height: 18px;
+  margin: 0;
+}
+
+.format_mssg span{
+  float: none !important;
+  font-family: "Fort-Black" !important;
+}
+
+@media (min-width:767px) {
+  .hide--desktop{
+    display: none;
+  }
+}
+
+@media (max-width:767px) {
+  .faqs-content-inside{
+    padding: 16px 20px 0 32px;
+  }
+
+  .hide--mobile{
+    display: none;
+  }
+
+  .product-form__buttons .product-form__submit{
+    font-size: 12px;
+    padding: 21px 0;
+  }
+
+  .formart-info_text{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .formart-info_text .product_image img{
+    width: 45px;
+  }
+
+  .no_lylty.format_mssg{
+    display: none;
+  }
+
+  .product_mobile{
+    padding: 0;
+    height: 100%;
+    padding: 24px 0;
+    background: white;
+  }
+
+  .product_mobile .variant-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product_mobile .variant-wrapper__info{
+    display: flex;
+    gap: 10px;
+  }
+
+  .product_mobile .secvices{
+    margin-top: 24px;
+    padding: 0;
+  }
+
+  .format-info{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .product__title h1{
+    font-size: 25px;
+  }
 }
